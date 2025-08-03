@@ -5,7 +5,7 @@
 [![GitHub Models](https://img.shields.io/badge/GitHub%20Models-AI%20Inference-purple.svg)](https://github.blog/ai-and-ml/llms/solving-the-inference-problem-for-open-source-ai-projects-with-github-models/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-A modern, full-stack AI chatbot application built with **FastAPI** and **React**, leveraging **GitHub Models** for free, open-source AI inference. Features a beautiful, responsive UI with real-time chat capabilities and secure user authentication.
+A modern, full-stack AI chatbot application built with **FastAPI** and **Jinja2**, leveraging **GitHub Models** for free, open-source AI inference. Features a beautiful, responsive UI with real-time chat capabilities and secure user authentication.
 
 ## ✨ Features
 
