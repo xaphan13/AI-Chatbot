@@ -42,7 +42,7 @@ A modern, full-stack AI chatbot application built with **FastAPI** and **React**
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/ai-chatbot.git
+   git clone https://github.com/Sohail342/AI-Chatbot.git
    cd ai-chatbot
    ```
 
@@ -210,69 +210,3 @@ pytest tests/test_chat.py
 - **Authentication**: Test login/logout flow
 - **AI**: Verify GitHub Models responses
 
-## 📦 Deployment
-
-### Docker Deployment
-```bash
-# Build image
-docker build -t ai-chatbot .
-
-# Run container
-docker run -p 8000:8000 -e GITHUB_TOKEN=your_token ai-chatbot
-```
-
-### Railway Deployment
-```bash
-# Install Railway CLI
-npm install -g @railway/cli
-
-# Deploy
-railway login
-railway init
-railway up
-```
-
-### Heroku Deployment
-```bash
-# Install Heroku CLI
-heroku create your-ai-chatbot
-heroku config:set GITHUB_TOKEN=your_token
-git push heroku main
-```
-
-## 🤝 Contributing
-
-We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
-
-### Quick Contribution Steps
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/amazing-feature`
-3. Make your changes
-4. Add tests for new functionality
-5. Commit: `git commit -m 'Add amazing feature'`
-6. Push: `git push origin feature/amazing-feature`
-7. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- **GitHub Models** for providing free AI inference
-- **FastAPI** for the excellent web framework
-- **Tailwind CSS** for the beautiful styling
-- **Lucide Icons** for the consistent icon set
-- **FastAPI-Users** for user management
-
-## 📞 Support
-
-- **Issues**: [GitHub Issues](https://github.com/yourusername/ai-chatbot/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/yourusername/ai-chatbot/discussions)
-- **Email**: support@yourproject.com
-
----
-
-⭐ **Star this repository** if you find it helpful!
-
-Made with ❤️ by [Your Name](https://github.com/yourusername)
