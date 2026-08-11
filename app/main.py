@@ -25,26 +25,31 @@ app.include_router(login_router, prefix="/auth", tags=["auth"])
 app.include_router(users_router, prefix="/users", tags=["users"])
 app.include_router(register_router, prefix="/auth", tags=["auth"])
 
+
 # HTML page routes
 @app.get("/")
 async def landing_page(request: Request):
     """Landing page"""
     return templates.TemplateResponse("landing.html", {"request": request})
 
+
 @app.get("/login")
 async def login_page(request: Request):
     """Login page"""
     return templates.TemplateResponse("login.html", {"request": request})
+
 
 @app.get("/signup")
 async def signup_page(request: Request):
     """Signup page"""
     return templates.TemplateResponse("signup.html", {"request": request})
 
+
 @app.get("/chat")
 async def chat_page(request: Request, user: User = Depends(current_user)):
     """Chat interface (requires authentication)"""
     return templates.TemplateResponse("index.html", {"request": request})
+
 
 @app.get("/health")
 async def health_check(user: User = Depends(current_user)):

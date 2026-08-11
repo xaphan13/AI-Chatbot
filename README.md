@@ -98,22 +98,12 @@ This application uses **GitHub Models** for AI inference, providing free access 
 # Example API call to GitHub Models
 import requests
 
-headers = {
-    'Authorization': f'Bearer {GITHUB_TOKEN}',
-    'Content-Type': 'application/json'
-}
+headers = {"Authorization": f"Bearer {GITHUB_TOKEN}", "Content-Type": "application/json"}
 
-payload = {
-    'model': 'gpt-4o',
-    'messages': [
-        {'role': 'user', 'content': 'Hello, AI!'}
-    ]
-}
+payload = {"model": "gpt-4o", "messages": [{"role": "user", "content": "Hello, AI!"}]}
 
 response = requests.post(
-    'https://models.github.ai/inference/chat/completions',
-    headers=headers,
-    json=payload
+    "https://models.github.ai/inference/chat/completions", headers=headers, json=payload
 )
 ```
 

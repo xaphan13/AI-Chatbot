@@ -1,17 +1,25 @@
-from fastapi_users import FastAPIUsers
-from fastapi_users.authentication import AuthenticationBackend, BearerTransport, JWTStrategy, CookieTransport
 import uuid
-from fastapi import Depends
 
-from app.models.users import User
-from app.services.user_manager import get_user_manager
-from app.schemas.users import UserRead, UserCreate, UserUpdate
+from fastapi import Depends
+from fastapi_users import FastAPIUsers
+from fastapi_users.authentication import (
+    AuthenticationBackend,
+    BearerTransport,
+    CookieTransport,
+    JWTStrategy,
+)
+
 from app.core.config import settings
+from app.models.users import User
+from app.schemas.users import UserCreate, UserRead, UserUpdate
+from app.services.user_manager import get_user_manager
 
 SECRET = settings.SECRET
 
+
 def get_jwt_strategy() -> JWTStrategy:
     return JWTStrategy(secret=SECRET, lifetime_seconds=3600)
+
 
 # JWT authentication for API
 bearer_transport = BearerTransport(tokenUrl="auth/jwt/login")
