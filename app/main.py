@@ -1,11 +1,17 @@
-from fastapi import FastAPI, Depends, Request
-from fastapi.templating import Jinja2Templates
+from fastapi import Depends, FastAPI, Request
 from fastapi.staticfiles import StaticFiles
+from fastapi.templating import Jinja2Templates
+
 from app.api.v1.chat import router as bot_router
-from app.api.v1.users import login_router, users_router, register_router, fastapi_users
-from app.models.users import User
-from app.api.v1.users import current_user
+from app.api.v1.users import (
+    current_user,
+    fastapi_users,
+    login_router,
+    register_router,
+    users_router,
+)
 from app.core.config import settings
+from app.models.users import User
 
 app = FastAPI()
 
